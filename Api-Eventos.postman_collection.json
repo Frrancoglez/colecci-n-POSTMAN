@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "b3d9db24-5b93-4102-b916-2e86d42e3707",
+		"name": "Api-Eventos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34356386"
+	},
+	"item": [
+		{
+			"name": "/empleados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/empleados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"empleados"
+					]
+				},
+				"description": "Recupera una lista de todos los empleados"
+			},
+			"response": []
+		},
+		{
+			"name": "/turnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/turnos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"turnos"
+					]
+				},
+				"description": "Recupera una lista de todos los turnos con sus respectivos empleados asignados"
+			},
+			"response": []
+		},
+		{
+			"name": "/oncall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/oncall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"oncall"
+					]
+				},
+				"description": "Recupera todos los empleados que no tienen un turno asignado"
+			},
+			"response": []
+		},
+		{
+			"name": "/assign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"14-06-2024\",\r\n    \"idEmpleado\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"assign"
+					]
+				},
+				"description": "Crea un nuevo turno y asigna un empleado segun el id entregado"
+			},
+			"response": []
+		},
+		{
+			"name": "/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"all"
+					]
+				},
+				"description": "Recupera todos los empleados que estan de turno en el mes actual"
+			},
+			"response": []
+		}
+	]
+}
